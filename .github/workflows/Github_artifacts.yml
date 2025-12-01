@@ -6,13 +6,15 @@ on:
 job:
     job_1:
         - name: Upload Artifact
-          run: echo "Hi, I am storing this data in this file, so that I can use this in the subsequent jobs within this workflow run. I
-          will upload this file to Github storage and download it from there when needed in this workflow run." > file.txt
+          runs-on: ubuntu-latest
+          steps: 
+            - name: "create local file"
+              run: echo "Hi, I am storing this data in this file, so that I can use this in the subsequent jobs within this workflow run. I will upload this file to Github storage and download it from there when needed in this workflow run." > file.txt
           
-        - uses: actions/upload-artifact@v2
-          with:
-            name: file
-            path: file.txt
+            - uses: actions/upload-artifact@v2
+            with:
+                name: file
+                path: file.txt
             
     job_2:
         - name: Download Artifact
