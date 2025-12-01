@@ -1,7 +1,7 @@
 name: 'Calling env variables from GITHUB'
 
 on:
-    workflow-dispatch:
+    workflow_dispatch:
 
 jobs: 
     custom_env_from_GITHUB:
