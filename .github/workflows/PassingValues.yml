@@ -1,6 +1,7 @@
 name: 'Passing values to next jobs'
 
-on: workflow_dispatch:
+on: 
+    workflow_dispatch:
 
 jobs:
     passing_values_bw_steps:
