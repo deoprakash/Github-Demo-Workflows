@@ -15,8 +15,8 @@ jobs:
               id: var_source_step
               run: |
                 echo "Performing a random task"
-                echo "name=var1_name::GithubActions" >> $GITHUB_OUTPUTS
-                echo "name=var2_name::$(date +'%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUTS
+                echo "name=var1_name::GithubActions" >> $GITHUB_OUTPUT
+                echo "name=var2_name::$(date +'%Y-%m-%d-%H-%M')" >> $GITHUB_OUTPUT
 
             - name: get-variable-value
               run: |
