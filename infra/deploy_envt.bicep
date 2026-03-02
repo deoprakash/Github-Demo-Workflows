@@ -1,0 +1,14 @@
+
+
+
+resouce storage_account 'Microsoft.Storage/storageAccounts@2022-09-01' = {
+  name: 'mystorageaccount${uniqueString(resourceGroup().id)}'
+  location: resourceGroup().location
+  sku: {
+    name: 'Standard_LRS'
+  }
+  kind: 'StorageV2'
+  properties: {
+    accessTier: 'Hot'
+  }
+}
