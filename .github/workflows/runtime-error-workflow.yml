@@ -9,7 +9,6 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-          install-modules: 'math'
+          python-version: '3.9'
       - name: Import Failure
         run: 'python -c "import math"'
